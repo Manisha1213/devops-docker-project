@@ -3,9 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
+        stage('Clone Repository') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/devops-docker-project.git'
+                git 'https://github.com/Manisha1213/devops-docker-project.git'
             }
         }
 
@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage('Run Container') {
+        stage('Run Docker Container') {
             steps {
                 sh 'docker run -d -p 8081:80 devops-webapp'
             }
@@ -23,4 +23,3 @@ pipeline {
 
     }
 }
-=
